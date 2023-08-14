@@ -10,6 +10,8 @@ const product = require("./api/product");
 
 app.use(express.json({ extended: false }));
 
+var blockRouter = require('./routes/block');
+app.use('/blok', blockRouter);
 app.use("/api/product", product);
 
 const PORT = process.env.PORT || 8080;
